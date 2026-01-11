@@ -146,6 +146,66 @@ SELECT *
 FROM employees
 WHERE hire_date BETWEEN '2022-01-01' AND '2022-12-31';
 
+-- employees whose department is IT or HR
+select * 
+from employees
+where department in ('IT' , 'HR');
+
+-- employees not in finance
+select *
+from employees
+where department <> "Finance";
+
+-- employees whose name contains "a"
+select * 
+from employees
+where name like "%a%";
+
+-- employees hired after 2021 and salary > 50K
+select *
+from employees
+where hire_date > '2021-12-31'
+	and salary > 50000;
+    
+-- highest paid employee
+select *
+from employees
+order by salary desc
+limit 1;
+
+-- top three highest salaries
+select *
+from employees
+order by salary DESC
+limit 3;
+
+-- sort by department , then salary descending
+SELECT *
+FROM employees
+ORDER BY department, salary DESC;
+
+-- Total salary per department
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department;
+
+-- average salary per department
+select department, avg(salary) as avg_salary
+from employees
+group by department;
+
+-- departments with exactly one employee
+select department
+from employees
+group by department
+having count(*) = 1;
+
+-- department with highest average salary
+select department
+from employees
+group by department
+order by avg(salary) desc
+limit 1;
 
 
 
