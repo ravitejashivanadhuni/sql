@@ -207,7 +207,32 @@ group by department
 order by avg(salary) desc
 limit 1;
 
+-- employees earning more than average salary
+select max(salary)
+from employees
+where salary <(
+	select max(salary)
+    from employees
+);
 
+-- employees earning same salary as someone else
+select * 
+from employees
+where salary in(
+	select salary
+    from employees
+    group by salary
+    having count(*) > 1
+);
+
+-- highest paid employee per department
+select *
+from employees e
+where salary = (
+	select max(salary)
+    from employees
+    where department = e.department
+);
 
 
  select * from employees;
