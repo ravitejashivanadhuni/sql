@@ -15,6 +15,12 @@ INSERT INTO employees VALUES
 (3, 'Sita', 'IT', 75000, '2020-07-20'),
 (4, 'Kiran', 'Finance', 50000, '2023-02-01'),
 (5, 'Meena', 'HR', 48000, '2022-11-12');
+Insert into employees values
+(6,"geetha", "HR", 25000,'2021-03-15'),
+(7,"sheela", "HR", 25000,'2021-03-15'),
+(8,"maala", "HR", 25000,'2021-03-15'),
+(9,"suamaya", "HR", 25000,'2021-03-15'),
+(10,"sameenah", "HR", 25000,'2021-03-15');
 
 select * from employees;
 
@@ -126,6 +132,9 @@ from employees;
 select name as emp_name, salary as monthly_salary
 from employees;
 
+-- remove duplicate departments
+select distinct department
+from employees;
 
  select * from employees;
  
