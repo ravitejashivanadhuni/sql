@@ -117,6 +117,15 @@ group by department
 having avg(salary) > 50000;
 
 ------------------------------------------------------------------------------------------------
+-- absolute foundations(clause behaviou)
+-- select only employee names
+select name
+from employees;
+
+-- rename columns using alias
+select name as emp_name, salary as monthly_salary
+from employees;
+
 
  select * from employees;
  
