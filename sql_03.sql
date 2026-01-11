@@ -136,6 +136,20 @@ from employees;
 select distinct department
 from employees;
 
+-- fetch employees with salary >= 50000
+select *
+from employees
+where salary >= 50000;
+
+-- Fetch employees hired in 2022
+SELECT *
+FROM employees
+WHERE hire_date BETWEEN '2022-01-01' AND '2022-12-31';
+
+
+
+
+
  select * from employees;
  
  
