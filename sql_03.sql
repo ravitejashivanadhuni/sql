@@ -83,6 +83,41 @@ where salary = 50000 or salary = 75000;
  -- find average salary if all employees
  select avg(salary) as average_salary
  from employees;
+ 
+ -- get the maximum salary in the company
+ select max(salary) as maximum_salary
+ from employees;
+ 
+ -- count how many employees are in each department
+select department , count(department) as emp_count
+from employees
+group by department;
+
+-- find total salary paid to the IT department
+select department , sum(salary) as total_salary_paid
+from employees
+where department = "IT"
+group by department;
+
+-- show departments having more than 1 employee
+select department
+from employees
+group by department
+having count(*) > 1;
+
+-- display the minimum salary per department
+select department, min(salary) as min_salary
+from employees
+group by department;
+
+-- find department where the average salary is greater than 50000
+select department
+from employees
+group by department
+having avg(salary) > 50000;
+
+------------------------------------------------------------------------------------------------
+
  select * from employees;
  
  
