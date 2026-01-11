@@ -76,7 +76,16 @@ select name, salary
 from employees
 where salary = 50000 or salary = 75000;
  
+ -- count the total number of employees
+ select count(name) as employees_count
+ from employees;
+ 
+ -- find average salary if all employees
+ select avg(salary) as average_salary
+ from employees;
  select * from employees;
+ 
+ 
  
  
 
