@@ -15,7 +15,7 @@ create table Employees(
     hire_date date,
     foreign key (dept_id) references Departments(dept_id)
 );
-
+-- Insert sample data
 insert into Departments values
 (1, 'HR'),
 (2, 'Finance'),
