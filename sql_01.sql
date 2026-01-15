@@ -4,6 +4,7 @@ create database practice;
 -- to use database
 use practice;
 
+-- to create tables
 create table Departments(
 	dept_id int primary key,
     dept_name varchar(50)
