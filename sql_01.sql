@@ -1,6 +1,7 @@
 -- to create database
 create database practice;
 
+-- to use database
 use practice;
 
 create table Departments(
