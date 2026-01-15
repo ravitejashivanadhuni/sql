@@ -1,3 +1,4 @@
+-- to create database
 create database practice;
 
 use practice;
